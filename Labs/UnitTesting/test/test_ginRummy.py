@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from resources import playingCard
+from resources import playingCard, ginRummy
 
 
 def setup():
@@ -23,7 +23,10 @@ class Test(TestCase):
 
         self.assertEquals(length_after_card_is_played, length_before_card_is_played - 1)
 
-    def test_determine_winner(self):
+    def test_determine_winner_player_is_a_winner(self):
         """Determine the winner"""
 
         hands = setup()
+        message = ginRummy.determineWinner()
+
+        self.assertEquals(message, "Winner Found")

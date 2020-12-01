@@ -1,14 +1,11 @@
 from resources import playingCard
 
 
-def determineWinner():
+def determineWinner(hand):
     """Determines the winner of the game"""
     # Check if one player has a run
     # a run can be 4 cards in a row
-
-
-def playACard():
-    """Play a card"""
+    playingCard.sortHand(hand)
 
 
 def main():
